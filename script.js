@@ -3,8 +3,13 @@ const result = document.querySelector(".value");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const data = form[0].value.split(",").map((x) => x + "<br></br>");
+  const data = form[0].value
+    .split(",")
+    .map((item, index) => `${index + 1}. ${item}`)
+    .join("\n\n");
 
-  result.innerHTML = data.join("");
+  navigator.clipboard.writeText(data);
+
   form.remove();
+  result.innerHTML = "Thanks for your using";
 });
