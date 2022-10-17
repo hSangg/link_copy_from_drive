@@ -27,7 +27,7 @@ body .form {
   height: 100vh;
   border: none;
   outline: none;
-  font-size: 10rem;
+  font-size: 12rem;
   color: white;
   font-weight: 800;
 }
@@ -35,4 +35,6 @@ body .form {
 h1 {
   color: yellow;
   font-size: 5rem;
+  cursor: default;
+  text-align: center;
 }

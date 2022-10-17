@@ -3,13 +3,14 @@ const result = document.querySelector(".value");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  const regex = /,/;
   const data = form[0].value
-    .split(",")
+    .split(regex)
     .map((item, index) => `${index + 1}. ${item}`)
     .join("\n\n");
 
   navigator.clipboard.writeText(data);
 
   form.remove();
-  result.innerHTML = "Thanks for your using";
+  result.innerHTML = "Thank you for using my services =)";
 });
