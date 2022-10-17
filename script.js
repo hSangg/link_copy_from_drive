@@ -13,4 +13,6 @@ form.addEventListener("submit", (e) => {
 
   form.remove();
   result.innerHTML = "Thank you for using my services =)";
+  window.open("https://chat.zalo.me/", "_blank").focus();
+  window.close();
 });
