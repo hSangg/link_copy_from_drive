@@ -9,10 +9,11 @@ form.addEventListener("submit", (e) => {
     .map((item, index) => `${index + 1}. ${item}`)
     .join("\n\n");
 
+  console.log(data);
+
   navigator.clipboard.writeText(data);
 
   form.remove();
   result.innerHTML = "Thank you for using my services =)";
   window.open("https://chat.zalo.me/", "_blank").focus();
-  window.close();
 });
